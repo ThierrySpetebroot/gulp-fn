@@ -1,0 +1,21 @@
+{
+  "name": "gulp-fn",
+  "version": "0.0.0",
+  "description": "gulp-fn - gulp plugin used in order to run a custom function",
+  "main": "gulp-fn.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jsamine-node ./tests/"
+  },
+  "keywords": [
+    "gulp",
+    "plugin",
+    "function",
+    "js",
+    "javascript"
+  ],
+  "author": "Thierry Spetebroot",
+  "license": "ISC"
+}
