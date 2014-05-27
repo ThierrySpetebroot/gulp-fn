@@ -16,8 +16,9 @@ Use it in your NodeJs code
         gulp.src('./gulp-fn.js')
           .pipe(gulpFn(function(file) {
               console.log("Hello " + file.path);
-            }));
-        })
+          })
+        );
+    });
 
 ## API
     gulpFn(fn, filter = true) : Transform
