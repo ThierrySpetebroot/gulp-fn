@@ -5,9 +5,11 @@ It allows to run custom functions in the gulp pipeline without having to deal wi
 
 ## usage
 Install npm package
+
     npm install git://github.com/ThierrySpetebroot/gulp-fn.git
 
 Use it in your NodeJs code
+
     var gulpFn = require('gulp-fn');
 
     gulp.task('Hello gulp-fn', function() {
