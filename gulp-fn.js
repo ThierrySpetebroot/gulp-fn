@@ -22,7 +22,10 @@ gulpFn = function(fn, filter) {
     filter = true; // auto-push flag
 
   stream = through.obj(function(file, enc, callback) {
-    fn(file)
+    if(filter)
+      fn(file);
+    else
+      fn.call(this, file);
 
     if(filter)
       this.push(file);
