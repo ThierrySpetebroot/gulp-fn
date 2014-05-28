@@ -23,6 +23,8 @@
   "author": "Thierry Spetebroot",
   "license": "ISC",
   "dependencies": {
-    "gulp": "^3.6.2"
+    "gulp": "^3.6.2",
+    "through2": "^0.4.2",
+    "gulp-util": "^2.2.14"
   }
 }
