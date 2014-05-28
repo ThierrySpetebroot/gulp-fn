@@ -10,7 +10,8 @@ Install npm package
 
 Use it in your NodeJs code
 
-    var gulpFn = require('gulp-fn');
+    var gulp    = require('gulp');
+    var gulpFn  = require('gulp-fn');
 
     gulp.task('Hello gulp-fn', function() {
         gulp.src('./gulp-fn.js')
