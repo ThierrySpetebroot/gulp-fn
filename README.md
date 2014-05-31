@@ -6,7 +6,7 @@ It allows to run custom functions in the gulp pipeline without having to deal wi
 ## usage
 Install npm package
 
-    npm install git://github.com/ThierrySpetebroot/gulp-fn.git
+    npm install gulp-fn
 
 Use it in your NodeJs code
 
