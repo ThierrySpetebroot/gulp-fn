@@ -1,13 +1,11 @@
 /*
 Gulp-Fn
  */
-var PLUGIN_NAME, PluginError, gulpFn, gutil, through;
+var PLUGIN_NAME, PluginError, gulpFn, through;
 
 through = require('through2');
 
-gutil = require('gulp-util');
-
-PluginError = gutil.PluginError;
+PluginError = require('plugin-error');
 
 PLUGIN_NAME = 'gulp-fn';
 
