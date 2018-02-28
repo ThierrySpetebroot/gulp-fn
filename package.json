@@ -1,6 +1,6 @@
 {
   "name": "gulp-fn",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "gulp-fn - gulp plugin used in order to run custom functions per file",
   "main": "gulp-fn.js",
   "repository": {
