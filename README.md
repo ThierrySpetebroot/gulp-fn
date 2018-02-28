@@ -6,24 +6,32 @@ It allows to run custom functions in the gulp pipeline without having to deal wi
 ## usage
 Install npm package
 
-    npm install gulp-fn
+```
+npm install gulp-fn
+```
 
-Use it in your NodeJs code
+Use it in your Node.js code
 
-    var gulp    = require('gulp');
-    var gulpFn  = require('gulp-fn');
+```js
+var gulp    = require('gulp');
+var gulpFn  = require('gulp-fn');
 
-    gulp.task('Hello gulp-fn', function() {
-        gulp.src('./gulp-fn.js')
-          .pipe(gulpFn(function(file) {
-              console.log("Hello " + file.path);
-          })
-        );
-    });
+gulp.task('hello_gulp-fn', function() {
+    gulp.src('./gulp-fn.js')
+      .pipe(gulpFn(function(file) {
+          console.log("Hello " + file.path);
+      })
+    );
+});
+```
 
 ## API
-    gulpFn(fn, filter = true) : Transform
+```js
+gulpFn(fn, filter = true) : Transform
+```
 
-- fn, function(file) => void - required - function invoked for each file in the stream.
-- filter, boolean - default: true - if true pushes the file in the pipeline automatically (it is not possible to remove or add file to the stream).
+- fn, `function(file) => void` - required - function invoked for each file in the stream.
+- filter, `boolean - default: true` - if `true` pushes the file in the pipeline automatically (it is not possible to remove or add file to the stream).
 
+
+NOTE: to add a file to the next step of the pipeline, you need to set the `filter` argument to `false` and use `this` (i.e., `this.push(file)` will add the file - done for every file by default or if `filter` is set to `true`).
