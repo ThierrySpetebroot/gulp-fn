@@ -1,17 +1,14 @@
 {
   "name": "gulp-fn",
   "version": "0.0.1",
-  "description": "gulp-fn - gulp plugin used in order to run a custom function",
+  "description": "gulp-fn - gulp plugin used in order to run custom functions per file",
   "main": "gulp-fn.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ThierrySpetebroot/gulp-fn.git"
   },
-  "directories": {
-    "test": "tests"
-  },
   "scripts": {
-    "test": "jsamine-node ./tests/"
+    "test": "jasmine"
   },
   "keywords": [
     "gulp",
@@ -26,5 +23,9 @@
     "gulp": "^3.6.2",
     "through2": "^0.4.2",
     "plugin-error": "^1.0.1"
+  },
+  "devDependencies": {
+    "event-stream": "^3.3.4",
+    "jasmine": "^3.1.0"
   }
 }
