@@ -1,17 +1,11 @@
 /*
 Gulp-Fn
  */
-var PLUGIN_NAME, PluginError, gulpFn, through;
+const through = require('through2');
+const PluginError = require('plugin-error');
+const PLUGIN_NAME = 'gulp-fn';
 
-through = require('through2');
-
-PluginError = require('plugin-error');
-
-PLUGIN_NAME = 'gulp-fn';
-
-gulpFn = function(fn, filter) {
-  var stream;
-
+const gulpFn = function(fn, filter) {
   if (!fn) {
     throw new PluginError(PLUGIN_NAME, "Missing fn parameter!");
   }
@@ -19,18 +13,20 @@ gulpFn = function(fn, filter) {
   if (filter === undefined)
     filter = true; // auto-push flag
 
-  stream = through.obj(function(file, enc, callback) {
-    if(filter)
-      fn(file);
-    else
-      fn.call(this, file);
-
-    if(filter)
+  return through.obj(function(file, enc, callback) {
+    if(filter) {
+      /*
+      Execute the passed function without "this" (to prevent side effects),
+      Include the current file automatically in the pipeline.
+       */
+      fn(file, enc);
       this.push(file);
+    } else {
+      fn.call(this, file, enc);
+    }
 
     return callback();
   });
-  return stream;
 };
 
 module.exports = gulpFn;

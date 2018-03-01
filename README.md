@@ -18,7 +18,7 @@ var gulpFn  = require('gulp-fn');
 
 gulp.task('hello_gulp-fn', function() {
     gulp.src('./gulp-fn.js')
-      .pipe(gulpFn(function(file) {
+      .pipe(gulpFn(function(file, enc) {
           console.log("Hello " + file.path);
       })
     );
@@ -30,7 +30,7 @@ gulp.task('hello_gulp-fn', function() {
 gulpFn(fn, filter = true) : Transform
 ```
 
-- fn, `function(file) => void` - required - function invoked for each file in the stream.
+- fn, `function(file, enc) => void` - required - function invoked for each file in the stream.
 - filter, `boolean - default: true` - if `true` pushes the file in the pipeline automatically (it is not possible to remove or add file to the stream).
 
 
