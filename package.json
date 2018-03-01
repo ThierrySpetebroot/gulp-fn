@@ -25,12 +25,12 @@
   "author": "Thierry Spetebroot",
   "license": "ISC",
   "dependencies": {
-    "gulp": "^3.6.2",
-    "through2": "^0.4.2",
-    "plugin-error": "^1.0.1"
+    "plugin-error": "^1.0.1",
+    "through2": "^0.4.2"
   },
   "devDependencies": {
     "event-stream": "^3.3.4",
+    "gulp": "^3.9.1",
     "jasmine": "^3.1.0"
   }
 }
