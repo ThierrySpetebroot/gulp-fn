@@ -12,6 +12,9 @@
   },
   "keywords": [
     "gulp",
+    "gulp-fn",
+    "gulp-plugin",
+    "gulpplugin",
     "plugin",
     "function",
     "js",
