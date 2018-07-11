@@ -12,6 +12,7 @@
   },
   "keywords": [
     "gulp",
+    "gulpfn",
     "gulp-fn",
     "gulp-callback",
     "gulp-plugin",
